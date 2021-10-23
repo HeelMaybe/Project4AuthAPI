@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "15ab7a85-8709-4c23-a73a-0cb83d95887f",
+		"name": "Project 5 API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-jwt-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwMDAsImV4cCI6MTYzNDYxNzE3OSwibmFtZSI6IkJvYiBTbWl0aCIsImlhdCI6MTYzNDYxNjI3OX0.Q1Yweh3KVCAbLDWFPG3cWSfldL99k2PqN6svXfpdGNM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Graham Helton\",\r\n    \"email\": \"g@g8.com\",\r\n    \"password\":\"123456\",\r\n    \"age\": \"21\",\r\n    \"weight\": \"240\",\r\n    \"address\": \"3311 Macie Mclean Pl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-jwt-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcyYjUzNmQyMWYyNDczZGZiN2MxMTEiLCJuYW1lIjoiR3JhaGFtIEhlbHRvbiIsImVtYWlsIjoiZ0BnNi5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRrSDBLM01CcEdzLnZkT1dwdWxWaExPZHRuUGVmWmZaeXR5cEdKZEFlalN1bW1TOTBSZzcwMiIsImFnZSI6IjIxIiwid2VpZ2h0IjoiMjQwIiwiYWRkcmVzcyI6IjMzMTEgTWFjaWUgTWNsZWFuIFBsIiwiZXhwIjoxNjM0OTEyMDgyLCJpYXQiOjE2MzQ5MDg0ODl9.jRO_0EbQvj0FAwh5IhEt7EPqUliN6r5XkEe-BaRRpWw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login?email=g@g6.com&password=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "g@g6.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://quiet-everglades-43643.herokuapp.com/api/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Graham Helton\",\r\n    \"email\": \"g@g70.com\",\r\n    \"password\":\"123456\",\r\n    \"age\": \"21\",\r\n    \"weight\": \"240\",\r\n    \"address\": \"3311 Macie Mclean Pl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://quiet-everglades-43643.herokuapp.com/api/signup",
+					"protocol": "https",
+					"host": [
+						"quiet-everglades-43643",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://quiet-everglades-43643.herokuapp.com/api/profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-jwt-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTcyZDQ5NWFlMmJhNWE2YmY3YTZiMDQiLCJuYW1lIjoiR3JhaGFtIEhlbHRvbiIsImVtYWlsIjoiZ0BnNzAuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkaWw0WDl1djZBb2kzdFVjYXNmVC5qZWF0NUhSbkNOUEZMZmY3RnVSbnVKZDZUbWxMVXF5MnEiLCJhZ2UiOiIyMSIsIndlaWdodCI6IjI0MCIsImFkZHJlc3MiOiIzMzExIE1hY2llIE1jbGVhbiBQbCIsImV4cCI6MTYzNDkxOTA3NywiaWF0IjoxNjM0OTE1NDc3fQ.OhN60gQdoZG8_X0hXNXIJzulgz_Tey-akIlkdiaUifY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://quiet-everglades-43643.herokuapp.com/api/profile",
+					"protocol": "https",
+					"host": [
+						"quiet-everglades-43643",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://quiet-everglades-43643.herokuapp.com/api/login?email=g@g71.com&password=123456",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://quiet-everglades-43643.herokuapp.com/api/login?email=g@g71.com&password=123456",
+					"protocol": "https",
+					"host": [
+						"quiet-everglades-43643",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "g@g71.com"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
