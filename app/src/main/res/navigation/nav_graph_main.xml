@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/signInFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.project4authapi.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.project4authapi.Fragments.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/signin_action"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/create_acount_action"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.project4authapi.Fragments.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/signin_action_from_signup"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/cancel_signup_action"
+            app:destination="@id/signInFragment" />
+    </fragment>
+</navigation>
